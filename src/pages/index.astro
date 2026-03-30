@@ -4,14 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Royaumes Oubliés - L'Héritage des Dragons" description="Plongez dans un univers sombre et épique où les dragons règnent en maîtres et les héros forgent leur destinée">
 	<!-- Hero Section -->
-	<section id="accueil" class="hero-section magic-grid">
-		<!-- Background Animation -->
-		<div class="absolute inset-0">
-			<div class="absolute top-20 left-10 w-32 h-32 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-royal); opacity: 0.2;"></div>
-			<div class="absolute top-40 right-20 w-48 h-48 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-action); opacity: 0.2; animation-delay: 1s;"></div>
-			<div class="absolute bottom-20 left-1/4 w-64 h-64 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-magical); opacity: 0.2; animation-delay: 2s;"></div>
-			<div class="absolute top-1/3 right-1/4 w-40 h-40 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-royal); opacity: 0.15; animation-delay: 3s;"></div>
-		</div>
+	<section id="accueil" class="hero-section" style="background-image: url('/images/background.avif'); background-size: cover; background-position: center; background-attachment: fixed;">
+		<!-- Overlay sombre pour la lisibilité -->
+		<div class="absolute inset-0 bg-black/60"></div>
 		
 		<!-- Hero Content -->
 		<div class="relative z-10 text-center px-4 max-w-7xl mx-auto py-12">
@@ -28,11 +23,11 @@ import Layout from '../layouts/Layout.astro';
 			</h1>
 
 			
-			<p class="text-xl md:text-3xl mb-6 max-w-5xl mx-auto ancient-text animate-fade-in" style="animation-delay: 0.3s; color: var(--accent-royal); line-height: 1.4;">
+			<p class="text-xl md:text-3xl mb-6 max-w-5xl mx-auto ancient-text animate-fade-in" style="animation-delay: 0.3s; color: #C0C0C0; line-height: 1.4;">
 				Où les ombres dansent dans les ruines antiques, les dragons murmurent des secrets oubliés, et les héros écrivent leur légende dans le sang et le feu
 			</p>
 			
-			<p class="text-lg md:text-xl mb-8 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.5s; color: var(--text-secondary); line-height: 1.8;">
+			<p class="text-lg md:text-xl mb-8 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.5s; color: #FFFFFF; line-height: 1.8;">
 				Plongez dans un univers médiéval-fantastique où sept royaumes anciens s'affrontent pour le contrôle des terres oubliées. 
 				Des prophéties mystérieuses aux créatures légendaires, chaque coin de ce monde regorge de magie et d'aventures.
 			</p>
@@ -1257,12 +1252,13 @@ import Layout from '../layouts/Layout.astro';
 			<div class="card-epic p-8 border border-gold/30 magical-border">
 				<h3 class="text-2xl font-bold text-center mb-8 text-gold ancient-text animate-text-glow">Annuaire des Royaumes</h3>
 				
-				<div class="overflow-x-auto -mx-1 sm:-mx-4 px-1 sm:px-4">
-					<table class="w-full min-w-[180px] sm:min-w-[600px] border-collapse">
+				<div class="relative -mx-1 sm:-mx-4 px-1 sm:px-4">
+					<div class="overflow-x-auto scroll-smooth overscroll-x-contain" style="-webkit-overflow-scrolling: touch;">
+						<table class="w-full table-fixed border-collapse">
 						<thead>
 							<tr class="border-b-2 border-gold/30">
-								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
-									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+								<th class="px-0 sm:px-4 py-0 sm:py-3 text-left text-gold font-bold text-[7px] sm:text-lg whitespace-nowrap">
+									<svg class="hidden sm:inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
 										<!-- Couronne détaillée style armurerie -->
 										<path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5"/>
 										<path d="M19 19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V18H19V19Z"/>
@@ -1272,10 +1268,11 @@ import Layout from '../layouts/Layout.astro';
 										<path d="M10 8L12 6L14 8" stroke-width="0.8" opacity="0.6"/>
 										<path d="M11 6.5L12 5.5L13 6.5" stroke-width="0.6" opacity="0.5"/>
 									</svg>
-									Royaume
+									<span class="sm:hidden">Roy.</span>
+									<span class="hidden sm:inline">Royaume</span>
 								</th>
-								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
-									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+								<th class="px-0 sm:px-4 py-0 sm:py-3 text-left text-gold font-bold text-[7px] sm:text-lg whitespace-nowrap">
+									<svg class="hidden sm:inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
 										<!-- Dragon héraldique détaillé -->
 										<path d="M12 2C13.1 2 14 2.9 14 4C14 4.74 13.6 5.39 13 5.73V7H14C17.31 7 20 9.69 20 13C20 16.31 17.31 19 14 19H13V20C13 21.1 12.1 22 11 22C9.9 22 9 21.1 9 20V19H8C4.69 19 2 16.31 2 13C2 9.69 4.69 7 8 7H9V5.73C8.4 5.39 8 4.74 8 4C8 2.9 8.9 2 10 2H12"/>
 										<!-- Détails héraldiques -->
@@ -1287,10 +1284,11 @@ import Layout from '../layouts/Layout.astro';
 										<circle cx="14" cy="11" r="1.2" fill="currentColor" opacity="0.3"/>
 										<circle cx="14" cy="11" r="0.6" fill="currentColor" opacity="0.6"/>
 									</svg>
-									Souverain
+									<span class="sm:hidden">Souv.</span>
+									<span class="hidden sm:inline">Souverain</span>
 								</th>
-								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
-									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+								<th class="px-0 sm:px-4 py-0 sm:py-3 text-left text-gold font-bold text-[7px] sm:text-lg whitespace-nowrap">
+									<svg class="hidden sm:inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
 										<!-- Épée runique détaillée -->
 										<path d="M7 3L17 13L13 17L3 7L7 3Z"/>
 										<path d="M13 17L17 21L21 17L17 13"/>
@@ -1305,10 +1303,11 @@ import Layout from '../layouts/Layout.astro';
 										<!-- Pierre magique -->
 										<circle cx="17" cy="21" r="1" fill="currentColor" opacity="0.5"/>
 									</svg>
-									Pouvoir
+									<span class="sm:hidden">Pouv.</span>
+									<span class="hidden sm:inline">Pouvoir</span>
 								</th>
-								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
-									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+								<th class="px-0 sm:px-4 py-0 sm:py-3 text-left text-gold font-bold text-[7px] sm:text-lg whitespace-nowrap">
+									<svg class="hidden sm:inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
 										<!-- Cristal facetté complexe -->
 										<path d="M12 2L14.09 8.26L21 9L16 14L17.45 21L12 17.77L6.55 21L8 14L3 9L9.91 8.26L12 2Z"/>
 										<!-- Facettes internes -->
@@ -1322,10 +1321,11 @@ import Layout from '../layouts/Layout.astro';
 										<circle cx="12" cy="12" r="1.5" fill="currentColor" opacity="0.3"/>
 										<circle cx="12" cy="12" r="0.8" fill="currentColor" opacity="0.6"/>
 									</svg>
-									Ressources
+									<span class="sm:hidden">Ress.</span>
+									<span class="hidden sm:inline">Ressources</span>
 								</th>
-								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
-									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+								<th class="px-0 sm:px-4 py-0 sm:py-3 text-left text-gold font-bold text-[7px] sm:text-lg whitespace-nowrap">
+									<svg class="hidden sm:inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
 										<!-- Bouclier héraldique orné -->
 										<path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/>
 										<!-- Croix centrale -->
@@ -1339,128 +1339,130 @@ import Layout from '../layouts/Layout.astro';
 										<!-- Fleur de lis -->
 										<path d="M12 4L11 6L12 8L13 6L12 4" fill="currentColor" opacity="0.4"/>
 									</svg>
-									Alliance
+									<span class="sm:hidden">All.</span>
+									<span class="hidden sm:inline">Alliance</span>
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-1 sm:px-4 py-1 sm:py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2">
 										<div class="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-0">
-											<div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-pulse"></div>
-											<span class="text-red-400 font-bold text-xs sm:text-base">Nord Sauvage</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-pulse"></div>
+											<span class="text-red-400 font-bold text-[8px] sm:text-base">Nord Sauvage</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Roi Jon Snow</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Glace & Loups</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Obsidienne, Fourrure</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-									<span class="px-1 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">Neutre</span>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Roi Jon Snow</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Glace & Loups</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Obsidienne, Fourrure</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-blue-500/20 text-blue-400 rounded text-[7px] sm:text-xs">Neutre</span>
 								</td>
 							</tr>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col sm:flex-row items-start sm:items-center gap-0.5 sm:gap-2">
 										<div class="flex items-center gap-0.5 sm:gap-2 mb-0.5 sm:mb-0">
 											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
-											<span class="text-gray-400 font-bold text-xs sm:text-base">Terres de l'Ombre</span>
+											<span class="text-gray-400 font-bold text-[8px] sm:text-base">Terres de l'Ombre</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Seigneur Mordred</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Ombres & Nécromancie</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Crystals Noirs, Poison</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-									<span class="px-1 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Hostile</span>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Seigneur Mordred</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Ombres & Nécromancie</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Crystals Noirs, Poison</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-red-500/20 text-red-400 rounded text-[7px] sm:text-xs">Hostile</span>
 								</td>
 							</tr>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-1 py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col items-start gap-1">
 										<div class="flex items-center gap-1 mb-1">
-											<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
-											<span class="text-orange-400 font-bold text-xs">Empire du Soleil</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+											<span class="text-orange-400 font-bold text-[8px] sm:text-base">Empire du Soleil</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Empereur Ra-Hor</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Feu & Lumière</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Or, Épices, Sables</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-							<span class="px-1 py-0.5 bg-green-500/20 text-green-400 rounded text-xs">Allié</span>
-						</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Empereur Ra-Hor</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Feu & Lumière</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Or, Épices, Sables</td>
+								<td class="px-0 sm:px-2 py-0 sm:py-2 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-green-500/20 text-green-400 rounded text-[7px] sm:text-xs">Allié</span>
+								</td>
 							</tr>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-1 py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col items-start gap-1">
 										<div class="flex items-center gap-1 mb-1">
-											<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
-											<span class="text-green-400 font-bold text-xs">Forêt Primitive</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+											<span class="text-green-400 font-bold text-[8px] sm:text-base">Forêt Primitive</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Reine Galadriel</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Nature & Magie</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Herbes, Bois Rares</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-							<span class="px-1 py-0.5 bg-green-500/20 text-green-400 rounded text-xs">Allié</span>
-						</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Reine Galadriel</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Nature & Magie</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Herbes, Bois Rares</td>
+								<td class="px-0 sm:px-2 py-0 sm:py-2 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-green-500/20 text-green-400 rounded text-[7px] sm:text-xs">Allié</span>
+								</td>
 							</tr>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-1 py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col items-start gap-1">
 										<div class="flex items-center gap-1 mb-1">
-											<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
-											<span class="text-blue-400 font-bold text-xs">Îles Mauditées</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+											<span class="text-blue-400 font-bold text-[8px] sm:text-base">Îles Mauditées</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Capitaine Barbe-Noire</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Eaux & Tempêtes</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Perles, Corail</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-						<span class="px-1 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">Neutre</span>
-						</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Capitaine Barbe-Noire</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Eaux & Tempêtes</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Perles, Corail</td>
+								<td class="px-0 sm:px-2 py-0 sm:py-2 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-yellow-500/20 text-yellow-400 rounded text-[7px] sm:text-xs">Neutre</span>
+								</td>
 							</tr>
 							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
-								<td class="px-1 py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col items-start gap-1">
 										<div class="flex items-center gap-1 mb-1">
-											<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-											<span class="text-purple-400 font-bold text-xs">Plateaux Célestes</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+											<span class="text-purple-400 font-bold text-[8px] sm:text-base">Plateaux Célestes</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Archonte Zeus</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Cieux & Foudre</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Éther, Cristaux</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-						<span class="px-1 py-0.5 bg-purple-500/20 text-purple-400 rounded text-xs">Mystique</span>
-						</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Archonte Zeus</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Cieux & Foudre</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Éther, Cristaux</td>
+								<td class="px-0 sm:px-2 py-0 sm:py-2 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-purple-500/20 text-purple-400 rounded text-[7px] sm:text-xs">Mystique</span>
+								</td>
 							</tr>
 							<tr class="hover:bg-gold/5 transition-colors">
-								<td class="px-1 py-4">
+								<td class="px-0 sm:px-4 py-0 sm:py-4">
 									<div class="flex flex-col items-start gap-1">
 										<div class="flex items-center gap-1 mb-1">
-											<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 1.2s;"></div>
-											<span class="text-yellow-400 font-bold text-xs">Déserts Ardents</span>
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 1.2s;"></div>
+											<span class="text-yellow-400 font-bold text-[8px] sm:text-base">Déserts Ardents</span>
 										</div>
 									</div>
 								</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Sultan Aladin</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Feu & Illusions</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Gems, Tapis Volants</td>
-								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
-						<span class="px-1 py-0.5 bg-orange-500/20 text-orange-400 rounded text-xs">Commercial</span>
-						</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Sultan Aladin</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Feu & Illusions</td>
+								<td class="px-0 sm:px-4 py-0 sm:py-4 text-gray-300 text-[7px] sm:text-base leading-tight overflow-hidden whitespace-nowrap text-ellipsis">Gems, Tapis Volants</td>
+								<td class="px-0 sm:px-2 py-0 sm:py-2 whitespace-nowrap">
+									<span class="px-0.5 py-[1px] bg-orange-500/20 text-orange-400 rounded text-[7px] sm:text-xs">Commercial</span>
+								</td>
 							</tr>
 						</tbody>
 					</table>
+					</div>
+					<div class="pointer-events-none sm:hidden absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-black/60 to-transparent"></div>
+					<div class="sm:hidden mt-2 text-[11px] text-gray-300/80 text-right">Glisse →</div>
 				</div>
-				
-				<!-- Statistiques des Royaumes -->
 				<div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
 					<div class="text-center p-4 bg-gradient-to-br from-red-900/20 to-red-800/10 rounded-lg border border-red-500/20">
 						<div class="text-2xl font-bold text-red-400 animate-pulse">7</div>
