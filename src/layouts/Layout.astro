@@ -1397,6 +1397,35 @@ const { title, description = "Site vitrine heroic fantasy et medieval", image = 
 				border-radius: 4px;
 			}
 
+		/* Scrollbar horizontale pour tableaux */
+		.scrollbar-thin {
+			scrollbar-width: thin;
+		}
+
+		.scrollbar-thumb-gold::-webkit-scrollbar-thumb {
+			background: linear-gradient(90deg, var(--accent-royal), var(--accent-action));
+			border-radius: 4px;
+		}
+
+		.scrollbar-track-gray-800::-webkit-scrollbar-track {
+			background: rgba(31, 41, 55, 0.5);
+			border-radius: 4px;
+		}
+
+		.overflow-x-auto::-webkit-scrollbar {
+			height: 8px;
+		}
+
+		.overflow-x-auto::-webkit-scrollbar-thumb {
+			background: linear-gradient(90deg, var(--accent-royal), var(--accent-action));
+			border-radius: 4px;
+		}
+
+		.overflow-x-auto::-webkit-scrollbar-track {
+			background: rgba(31, 41, 55, 0.5);
+			border-radius: 4px;
+		}
+
 			/* Effet de chargement magique */
 			.magical-loading {
 				display: inline-block;
