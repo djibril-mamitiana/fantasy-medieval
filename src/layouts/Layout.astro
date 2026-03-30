@@ -1350,6 +1350,14 @@ const { title, description = "Site vitrine heroic fantasy et medieval", image = 
 				position: relative;
 				overflow: hidden;
 				background: linear-gradient(135deg, var(--bg-dominant), var(--bg-secondary));
+				padding: 2rem 0;
+			}
+
+			@media (max-width: 640px) {
+				.hero-section {
+					min-height: auto;
+					padding: 6rem 0 4rem;
+				}
 			}
 
 			.hero-section::before {
