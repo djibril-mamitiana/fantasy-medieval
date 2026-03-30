@@ -1,11 +1,1552 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Royaumes Oubliés - L'Héritage des Dragons" description="Plongez dans un univers sombre et épique où les dragons règnent en maîtres et les héros forgent leur destinée">
+	<!-- Hero Section -->
+	<section id="accueil" class="hero-section magic-grid">
+		<!-- Background Animation -->
+		<div class="absolute inset-0">
+			<div class="absolute top-20 left-10 w-32 h-32 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-royal); opacity: 0.2;"></div>
+			<div class="absolute top-40 right-20 w-48 h-48 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-action); opacity: 0.2; animation-delay: 1s;"></div>
+			<div class="absolute bottom-20 left-1/4 w-64 h-64 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-magical); opacity: 0.2; animation-delay: 2s;"></div>
+			<div class="absolute top-1/3 right-1/4 w-40 h-40 rounded-full blur-3xl animate-ethereal-float" style="background: var(--accent-royal); opacity: 0.15; animation-delay: 3s;"></div>
+		</div>
+		
+		<!-- Hero Content -->
+		<div class="relative z-10 text-center px-4 max-w-7xl mx-auto py-12">
+			<!-- Badge d'accueil -->
+			<div class="badge-epic mb-6 animate-fade-in text-red-400 border-red-400/30 bg-red-900/20">
+				<svg class="icon-dragon" viewBox="0 0 24 24">
+					<path d="M12,2C13.1,2 14,2.9 14,4C14,4.74 13.6,5.39 13,5.73V7H14C17.31,7 20,9.69 20,13C20,16.31 17.31,19 14,19H13V20C13,21.1 12.1,22 11,22C9.9,22 9,21.1 9,20V19H8C4.69,19 2,16.31 2,13C2,9.69 4.69,7 8,7H9V5.73C8.4,5.39 8,4.74 8,4C8,2.9 8.9,2 10,2H12M12,4H10V7H8C5.79,7 4,8.79 4,11C4,13.21 5.79,15 8,15H16C18.21,15 20,13.21 20,11C20,8.79 18.21,7 16,7H14V4H12M8,9H16C17.1,9 18,9.9 18,11C18,12.1 17.1,13 16,13H8C6.9,13 6,12.1 6,11C6,9.9 6.9,9 8,9Z"/>
+				</svg>
+				<span class="text-red-400"  >Bienvenue, Noble Aventurier</span>
+			</div>
+			
+			<h1 class="title-epic mb-6 text-shadow-lg animate-fade-in text-gray-300 drop-shadow-[0_0_25px_rgba(192,192,192,0.8)]" data-text="ROYAUMES OUBLIÉS">
+				ROYAUMES OUBLIÉS
+			</h1>
+
+			
+			<p class="text-xl md:text-3xl mb-6 max-w-5xl mx-auto ancient-text animate-fade-in" style="animation-delay: 0.3s; color: var(--accent-royal); line-height: 1.4;">
+				Où les ombres dansent dans les ruines antiques, les dragons murmurent des secrets oubliés, et les héros écrivent leur légende dans le sang et le feu
+			</p>
+			
+			<p class="text-lg md:text-xl mb-8 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.5s; color: var(--text-secondary); line-height: 1.8;">
+				Plongez dans un univers médiéval-fantastique où sept royaumes anciens s'affrontent pour le contrôle des terres oubliées. 
+				Des prophéties mystérieuses aux créatures légendaires, chaque coin de ce monde regorge de magie et d'aventures.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style="animation-delay: 0.7s;">
+				<a href="#royaumes" class="btn-epic">
+					<svg class="icon-crown" viewBox="0 0 24 24">
+						<path d="M5,16L3,5L8.5,10L12,4L15.5,10L21,5L19,16H5M19,19C19,20.1 18.1,21 17,21H7C5.9,21 5,20.1 5,19V18H19V19Z"/>
+					</svg>
+					Explorer les Royaumes
+				</a>
+				<a href="#chroniques" class="btn-epic" style="background: linear-gradient(135deg, var(--bg-secondary), var(--bg-dominant));">
+					<svg class="icon-scroll" viewBox="0 0 24 24">
+						<path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+					</svg>
+					Lire les Chroniques
+				</a>
+			</div>
+			
+			<!-- Statistiques épiques -->
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+				<div class="card-epic p-4 text-center animate-fade-in" style="animation-delay: 1s;">
+					<div class="text-3xl font-bold animate-pulse" style="color: var(--accent-royal);">7</div>
+					<div class="text-xs" style="color: var(--text-secondary);">Royaumes Anciens</div>
+				</div>
+				<div class="card-epic p-4 text-center animate-fade-in" style="animation-delay: 1.1s;">
+					<div class="text-3xl font-bold animate-pulse" style="color: var(--accent-action);">42</div>
+					<div class="text-xs" style="color: var(--text-secondary);">Héros Légendaires</div>
+				</div>
+				<div class="card-epic p-4 text-center animate-fade-in" style="animation-delay: 1.2s;">
+					<div class="text-3xl font-bold animate-pulse" style="color: var(--accent-magical);">156</div>
+					<div class="text-xs" style="color: var(--text-secondary);">Créatures Mythiques</div>
+				</div>
+				<div class="card-epic p-4 text-center animate-fade-in" style="animation-delay: 1.3s;">
+					<div class="text-3xl font-bold animate-pulse" style="color: var(--accent-royal);">∞</div>
+					<div class="text-xs" style="color: var(--text-secondary);">Aventures</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Scroll Indicator -->
+		<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+			<svg class="w-8 h-8" style="color: var(--accent-action); opacity: 0.7;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Prophétie Section -->
+	<section id="prophetie" class="py-20 px-4 relative bg-gradient-to-b from-black to-gray-900">
+		<div class="container mx-auto max-w-6xl">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div class="animate-fade-in">
+					<h2 class="text-title text-center mb-8 text-shadow-lg">La Prophétie des Dragons</h2>
+					<div class="card-medieval p-8 border border-red-900/50">
+						<p class="text-gray-300 mb-6 leading-relaxed text-lg font-serif italic">
+							"Lorsque les sept couronnes tomberont et que les dragons s'éveilleront de leur sommeil millénaire, 
+							un héros issu du sang ancien se lèvera pour unifier les royaumes divisés..."
+						</p>
+						<p class="text-gray-400 mb-6 leading-relaxed">
+							Depuis des siècles, cette prophétie résonne dans les salles des trônes et les monastères isolés. 
+							Les sages l'étudient, les rois la craignent, et les aventuriers espèrent en être les instruments.
+						</p>
+						<div class="grid grid-cols-2 gap-4 mt-8">
+							<div class="text-center">
+								<div class="text-3xl font-bold text-red-500 mb-2">7</div>
+								<div class="text-gray-400 text-sm">Royaumes à Unifier</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-orange-500 mb-2">3</div>
+								<div class="text-gray-400 text-sm">Dragons Anciens</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-yellow-600 mb-2">1</div>
+								<div class="text-gray-400 text-sm">Héros Légitime</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-gray-500 mb-2">∞</div>
+								<div class="text-gray-400 text-sm">Sacrifices à Faire</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="animate-fade-in" style="animation-delay: 0.3s;">
+					<div class="card-medieval p-8 border border-orange-900/50">
+						<h3 class="text-2xl font-bold text-orange-400 mb-6">Les Signes avant-coureurs</h3>
+						<ul class="space-y-4">
+							<li class="flex items-start space-x-3">
+								<svg class="icon-sword" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+									<path d="M6.92,5L5,7L8.09,10.09L3.5,14.59L4.91,16L9.5,11.41L13.09,15L15,13.09L11.91,10L16,5.92L14.59,4.5L10.5,8.59L6.92,5M20.41,4.5L14.5,10.41L15.91,11.82L21.82,5.91L20.41,4.5Z"/>
+								</svg>
+								<div>
+									<h4 class="text-yellow-500 font-semibold">Les Épées Pleurent</h4>
+									<p class="text-gray-400 text-sm">Les lames anciennes suintent une substance rouge comme le sang</p>
+								</div>
+							</li>
+							<li class="flex items-start space-x-3">
+								<svg class="icon-fireball" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+									<path d="M17.66,7.93L12,2.27L6.34,7.93C3.9,10.38 3.9,14.38 6.34,16.83C8.78,19.27 12.78,19.27 15.23,16.83C17.67,14.38 17.67,10.38 15.23,7.93L17.66,7.93M12,4.1L15.9,8L15.9,8C18.12,10.24 18.12,13.76 15.9,16C13.68,18.22 10.15,18.22 7.93,16C5.71,13.76 5.71,10.24 7.93,8L7.93,8L12,4.1Z"/>
+								</svg>
+								<div>
+									<h4 class="text-yellow-500 font-semibold">Feux Éternels</h4>
+									<p class="text-gray-400 text-sm">Les volcans endormis s'éveillent un par un</p>
+								</div>
+							</li>
+							<li class="flex items-start space-x-3">
+								<svg class="icon-crown" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+									<path d="M5,16L3,5L8.5,10L12,4L15.5,10L21,5L19,16H5M19,19C19,20.1 18.1,21 17,21H7C5.9,21 5,20.1 5,19V18H19V19Z"/>
+								</svg>
+								<div>
+									<h4 class="text-yellow-500 font-semibold">Couronnes Brisées</h4>
+									<p class="text-gray-400 text-sm">Les symboles du pouvoir se fissurent dans tout le royaume</p>
+								</div>
+							</li>
+							<li class="flex items-start space-x-3">
+								<svg class="icon-crystal" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+									<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+								</svg>
+								<div>
+									<h4 class="text-yellow-500 font-semibold">Lune de Sang</h4>
+									<p class="text-gray-400 text-sm">Trois nuits consécutives de sang céleste</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Royaumes Section -->
+	<section id="royaumes" class="py-20 px-4 relative">
+		<div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+		<div class="container mx-auto max-w-7xl relative z-10">
+			<h2 class="text-title text-center mb-16 text-shadow-lg">Les Sept Royaumes</h2>
+			
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+				<!-- Royaume 1 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-red-900/40">
+					<div class="w-full h-56 bg-gradient-to-br from-red-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-red-500/20">
+						<img src="/images/nord-sauvage.jpg" alt="Le Nord Sauvage" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-xl lg:text-2xl font-bold text-red-400 mb-4">Le Nord Sauvage</h3>
+					<p class="text-gray-300 mb-4">Terre de guerriers féroces et de traditions ancestrales, où l'hiver dure une décennie et les murmures des morts résonnent dans les forêts.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Montagnes de glace éternelles</li>
+						<li>• Forêts enchantées murmantes</li>
+						<li>• Forteresses invincibles</li>
+						<li>• Loups géants comme alliés</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-red-400">2.5M</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Force:</span>
+							<span class="text-red-400">⚔⚔⚔⚔⚔</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 2 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-gray-700/40" style="animation-delay: 0.2s;">
+					<div class="w-full h-56 bg-gradient-to-br from-gray-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-gray-500/20">
+						<img src="/images/terres-ombre.jpg" alt="Les Terres de l'Ombre" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-gray-300 mb-4">Les Terres de l'Ombre</h3>
+					<p class="text-gray-400 mb-4">Royaume mystérieux où les assassins règnent en maîtres et les secrets valent plus que l'or. Les nuits y sont éternelles.</p>
+					<ul class="text-gray-500 space-y-2 text-sm">
+						<li>• Cités souterraines vastes</li>
+						<li>• Guildes d'assassins légendaires</li>
+						<li>• Bibliothèques interdites</li>
+						<li>• Poisons magiques rares</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-gray-400">1.8M</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Furtivité:</span>
+							<span class="text-gray-400">🗡🗡🗡🗡🗡</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 3 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-orange-900/40" style="animation-delay: 0.4s;">
+					<div class="w-full h-56 bg-gradient-to-br from-orange-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-orange-500/20">
+						<img src="/images/empire-soleil.jpg" alt="L'Empire du Soleil" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-orange-400 mb-4">L'Empire du Soleil</h3>
+					<p class="text-gray-300 mb-4">Civilisation avancée où la magie et la technologie fusionnent. Des tours de cristal percent les nuages et les golems gardent les cités.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Tours de cristal flottantes</li>
+						<li>• Artéfacts technologiques</li>
+						<li>• Bibliothèques infinies</li>
+						<li>• Portails dimensionnels</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-orange-400">3.2M</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Magie:</span>
+							<span class="text-orange-400">✨✨✨✨✨</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 4 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-green-900/40" style="animation-delay: 0.6s;">
+					<div class="w-full h-56 bg-gradient-to-br from-green-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-green-500/20">
+						<img src="/images/foret-primitive.jpg" alt="La Forêt Primitive" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-green-400 mb-4">La Forêt Primitive</h3>
+					<p class="text-gray-300 mb-4">Domaine des elfes et des esprits de la nature. Des arbres millénaires abritent des civilisations cachées et une magie primordiale.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Arbres cités de 1000 ans</li>
+						<li>• Esprits de la nature</li>
+						<li>• Sources magiques pures</li>
+						<li>• Créatures mythiques</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-green-400">900K</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Nature:</span>
+							<span class="text-green-400">🌿🌿🌿🌿🌿</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 5 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-blue-900/40" style="animation-delay: 0.8s;">
+					<div class="w-full h-56 bg-gradient-to-br from-blue-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-blue-500/20">
+						<img src="/images/iles-maudites.jpg" alt="Les Îles Maudites" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-blue-400 mb-4">Les Îles Mauditées</h3>
+					<p class="text-gray-300 mb-4">Archipel mystérieux où les sirènes chantent des chants mortels et les trésors pirates sont protégés par des malédictions anciennes.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Mer tempétueuse éternelle</li>
+						<li>• Sirènes et krakens</li>
+						<li>• Épaves légendaires</li>
+						<li>• Trésors maudits</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-blue-400">1.2M</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Maritime:</span>
+							<span class="text-blue-400">⚓⚓⚓⚓⚓</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 6 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-purple-900/40" style="animation-delay: 1.0s;">
+					<div class="w-full h-56 bg-gradient-to-br from-purple-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-purple-500/20">
+						<img src="/images/plateaux-celestes.jpg" alt="Les Plateaux Célestes" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-purple-400 mb-4">Les Plateaux Célestes</h3>
+					<p class="text-gray-300 mb-4">Royaumes flottants dans les cieux, accessibles seulement par des ponts d'arc-en-ciel ou des montures ailées. La magie y est pure et puissante.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Cités dans les nuages</li>
+						<li>• Dragons alliés</li>
+						<li>• Cristaux magiques</li>
+						<li>• Portails stellaires</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-purple-400">600K</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Céleste:</span>
+							<span class="text-purple-400">🌟🌟🌟🌟🌟</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Royaume 7 -->
+				<div class="card-medieval transform transition-all duration-500 hover:scale-105 animate-fade-in border border-yellow-900/40" style="animation-delay: 1.2s;">
+					<div class="w-full h-56 bg-gradient-to-br from-yellow-900/20 to-black rounded-lg mb-6 flex items-center justify-center border-2 border-yellow-500/20">
+						<img src="/images/deserts-ardents.jpg" alt="Les Déserts Ardents" class="w-full h-full object-cover rounded-lg">
+					</div>
+					<h3 class="text-2xl font-bold text-yellow-400 mb-4">Les Déserts Ardents</h3>
+					<p class="text-gray-300 mb-4">Terre de feu et de sable où les tribus nomades maîtrisent les éléments et les génies des déserts accordent pouvoirs et sagesse.</p>
+					<ul class="text-gray-400 space-y-2 text-sm">
+						<li>• Dunes de sable mobiles</li>
+						<li>• Tempêtes de feu</li>
+						<li>• Oasis magiques</li>
+						<li>• Génies élémentaires</li>
+					</ul>
+					<div class="mt-4 pt-4 border-t border-gray-700">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-500">Population:</span>
+							<span class="text-yellow-400">1.5M</span>
+						</div>
+						<div class="flex justify-between text-sm mt-1">
+							<span class="text-gray-500">Feu:</span>
+							<span class="text-yellow-400">🔥🔥🔥🔥🔥</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Chroniques Section -->
+	<section id="chroniques" class="py-20 px-4 relative bg-gradient-to-b from-gray-900 to-black">
+		<div class="container mx-auto max-w-6xl">
+			<h2 class="text-title text-center mb-16 text-shadow-lg">Les Chroniques du Sang</h2>
+			
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<div class="card-medieval p-6 border border-red-900/30 animate-fade-in">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center mr-4">
+							<svg class="icon-scroll" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+								<path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-red-400">La Guerre des Cent Ans</h3>
+					</div>
+					<p class="text-gray-400 mb-4 leading-relaxed">
+						La plus longue guerre de l'histoire des royaumes, où des générations entières sont nées et mortes sans connaître la paix. Des héros comme Aragorn le Conquérant et Morgane la Sorcière ont marqué cette époque de sang et de gloire.
+					</p>
+					<div class="text-sm text-gray-500">
+						<svg class="icon-sword" viewBox="0 0 24 24" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px; color: var(--accent-action);">
+							<path d="M6.92,5L5,7L8.09,10.09L3.5,14.59L4.91,16L9.5,11.41L13.09,15L15,13.09L11.91,10L16,5.92L14.59,4.5L10.5,8.59L6.92,5M20.41,4.5L14.5,10.41L15.91,11.82L21.82,5.91L20.41,4.5Z"/>
+						</svg>
+						100 ans de conflit • 1M de morts • 7 royaumes impliqués
+					</div>
+				</div>
+
+				<div class="card-medieval p-6 border border-orange-900/30 animate-fade-in" style="animation-delay: 0.2s;">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-900 rounded-full flex items-center justify-center mr-4">
+							<svg class="icon-dragon" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+								<path d="M12,2C13.1,2 14,2.9 14,4C14,4.74 13.6,5.39 13,5.73V7H14C17.31,7 20,9.69 20,13C20,16.31 17.31,19 14,19H13V20C13,21.1 12.1,22 11,22C9.9,22 9,21.1 9,20V19H8C4.69,19 2,16.31 2,13C2,9.69 4.69,7 8,7H9V5.73C8.4,5.39 8,4.74 8,4C8,2.9 8.9,2 10,2H12M12,4H10V7H8C5.79,7 4,8.79 4,11C4,13.21 5.79,15 8,15H16C18.21,15 20,13.21 20,11C20,8.79 18.21,7 16,7H14V4H12M8,9H16C17.1,9 18,9.9 18,11C18,12.1 17.1,13 16,13H8C6.9,13 6,12.1 6,11C6,9.9 6.9,9 8,9Z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-orange-400">L'Ère des Dragons</h3>
+					</div>
+					<p class="text-gray-400 mb-4 leading-relaxed">
+						Quand les dragons régnaient sur les terres, imposant leur volonté par le feu et la peur. Seuls les Chevaliers du Dragon osaient leur défier, armés d'épées magiques et de courage surhumain.
+					</p>
+					<div class="text-sm text-gray-500">
+						<svg class="icon-fireball" viewBox="0 0 24 24" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px; color: var(--accent-action);">
+							<path d="M17.66,7.93L12,2.27L6.34,7.93C3.9,10.38 3.9,14.38 6.34,16.83C8.78,19.27 12.78,19.27 15.23,16.83C17.67,14.38 17.67,10.38 15.23,7.93L17.66,7.93M12,4.1L15.9,8L15.9,8C18.12,10.24 18.12,13.76 15.9,16C13.68,18.22 10.15,18.22 7.93,16C5.71,13.76 5.71,10.24 7.93,8L7.93,8L12,4.1Z"/>
+						</svg>
+						300 ans de domination • 13 dragons • 1000+ villages détruits
+					</div>
+				</div>
+
+				<div class="card-medieval p-6 border border-purple-900/30 animate-fade-in" style="animation-delay: 0.4s;">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-purple-900 rounded-full flex items-center justify-center mr-4">
+							<svg class="icon-crystal" viewBox="0 0 24 24" style="width: 20px; height: 20px; color: var(--accent-action);">
+								<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-purple-400">Le Schisme Magique</h3>
+					</div>
+					<p class="text-gray-400 mb-4 leading-relaxed">
+						La grande division entre mages blancs et noirs qui a déchiré le Conseil des Arcanes. Des batailles magiques épiques ont redéfini les lois de la réalité elle-même.
+					</p>
+					<div class="text-sm text-gray-500">
+						<svg class="icon-crystal" viewBox="0 0 24 24" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 4px; color: var(--accent-action);">
+							<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+						</svg>
+						50 ans de guerre magique • 200 mages • Réalité altérée
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Héros Légendaires Section -->
+	<section id="heros" class="py-20 px-4 relative">
+		<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+		<div class="container mx-auto max-w-6xl relative z-10">
+			<h2 class="text-title text-center mb-16 text-shadow-lg">Les Héros Légendaires</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="card-epic p-6 text-center border border-red-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300">
+					<div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-900/20 to-black rounded-full flex items-center justify-center border-2 border-red-500/20">
+						<img src="/images/aragorn-conquerant.jpg" alt="Aragorn le Conquérant" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-xl font-bold text-red-400 mb-2">Aragorn le Conquérant</h3>
+					<p class="text-gray-400 text-sm mb-3">Guerrier légendaire qui unifia les sept royaumes</p>
+					<div class="text-xs text-gray-500">
+						<svg class="icon-sword" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 2px; color: var(--accent-action);">
+							<path d="M6.92,5L5,7L8.09,10.09L3.5,14.59L4.91,16L9.5,11.41L13.09,15L15,13.09L11.91,10L16,5.92L14.59,4.5L10.5,8.59L6.92,5M20.41,4.5L14.5,10.41L15.91,11.82L21.82,5.91L20.41,4.5Z"/>
+						</svg>
+						Maître épéiste
+						<svg class="icon-crown" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M5,16L3,5L8.5,10L12,4L15.5,10L21,5L19,16H5M19,19C19,20.1 18.1,21 17,21H7C5.9,21 5,20.1 5,19V18H19V19Z"/>
+						</svg>
+						Roi
+						<svg class="icon-shield" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C14.8,12.9 13.4,14.5 12,14.5C10.6,14.5 9.2,12.9 9.2,11.5V10C9.2,8.6 10.6,7 12,7Z"/>
+						</svg>
+						Protecteur
+					</div>
+				</div>
+
+				<div class="card-epic p-6 text-center border border-purple-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.1s;">
+					<div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-purple-900/20 to-black rounded-full flex items-center justify-center border-2 border-purple-500/20">
+						<img src="/images/morgane-sorciere.jpg" alt="Morgane la Sorcière" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-xl font-bold text-purple-400 mb-2">Morgane la Sorcière</h3>
+					<p class="text-gray-400 text-sm mb-3">Archimage qui maîtrisait les arcanes interdits</p>
+					<div class="text-xs text-gray-500">
+						<svg class="icon-crystal" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 2px; color: var(--accent-action);">
+							<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+						</svg>
+						Magie noire
+						<svg class="icon-scroll" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+						</svg>
+						Savante
+						<svg class="icon-crystal" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+						</svg>
+						Puissante
+					</div>
+				</div>
+
+				<div class="card-epic p-6 text-center border border-green-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.2s;">
+					<div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-green-900/20 to-black rounded-full flex items-center justify-center border-2 border-green-500/20">
+						<img src="/images/legolas-sylvestre.jpg" alt="Legolas le Sylvestre" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-xl font-bold text-green-400 mb-2">Legolas le Sylvestre</h3>
+					<p class="text-gray-400 text-sm mb-3">Archer elfique aux flèches infaillibles</p>
+					<div class="text-xs text-gray-500">
+						<svg viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 2px; color: var(--accent-action);">
+							<path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 4,12A8,8 0 0,1 12,20A8,8 0 0,1 20,12A8,8 0 0,1 12,4M12,6A6,6 0 0,1 6,12A6,6 0 0,1 12,18A6,6 0 0,1 18,12A6,6 0 0,1 12,6M12,8A4,4 0 0,1 8,12A4,4 0 0,1 12,16A4,4 0 0,1 16,12A4,4 0 0,1 12,8Z"/>
+						</svg>
+						Nature
+						<svg viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,2C13.1,2 14,2.9 14,4C14,4.74 13.6,5.39 13,5.73V7H14C17.31,7 20,9.69 20,13C20,16.31 17.31,19 14,19H13V20C13,21.1 12.1,22 11,22C9.9,22 9,21.1 9,20V19H8C4.69,19 2,16.31 2,13C2,9.69 4.69,7 8,7H9V5.73C8.4,5.39 8,4.74 8,4C8,2.9 8.9,2 10,2H12M12,4H10V7H8C5.79,7 4,8.79 4,11C4,13.21 5.79,15 8,15H16C18.21,15 20,13.21 20,11C20,8.79 18.21,7 16,7H14V4H12M8,9H16C17.1,9 18,9.9 18,11C18,12.1 17.1,13 16,13H8C6.9,13 6,12.1 6,11C6,9.9 6.9,9 8,9Z"/>
+						</svg>
+						Précision
+						<svg viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17L16.5,12.5L20,16L12,24L4,16L7.5,12.5L12,17Z"/>
+						</svg>
+						Vision
+					</div>
+				</div>
+
+				<div class="card-medieval p-6 text-center border border-gray-700/40 animate-fade-in hover:border-blue-600/60 transition-all duration-300" style="animation-delay: 0.3s;">
+					<div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-blue-900 to-cyan-900 rounded-full flex items-center justify-center">
+						<img src="/images/shadow-assassin.jpg" alt="Shadow l'Assassin" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-xl font-bold text-blue-400 mb-2">Shadow l'Assassin</h3>
+					<p class="text-gray-400 text-sm mb-3">Maître des ombres et des poisons mortels</p>
+					<div class="text-xs text-gray-500">
+						<svg class="icon-sword" viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 2px; color: var(--accent-action);">
+							<path d="M6.92,5L5,7L8.09,10.09L3.5,14.59L4.91,16L9.5,11.41L13.09,15L15,13.09L11.91,10L16,5.92L14.59,4.5L10.5,8.59L6.92,5M20.41,4.5L14.5,10.41L15.91,11.82L21.82,5.91L20.41,4.5Z"/>
+						</svg>
+						Furtivité
+						<svg viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 4,12A8,8 0 0,1 12,20A8,8 0 0,1 20,12A8,8 0 0,1 12,4M12,6A6,6 0 0,1 6,12A6,6 0 0,1 12,18A6,6 0 0,1 18,12A6,6 0 0,1 12,6M12,8A4,4 0 0,1 8,12A4,4 0 0,1 12,16A4,4 0 0,1 16,12A4,4 0 0,1 12,8Z"/>
+						</svg>
+						Mortel
+						<svg viewBox="0 0 24 24" style="width: 12px; height: 12px; vertical-align: middle; margin: 0 2px; color: var(--accent-action);">
+							<path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 4,12A8,8 0 0,1 12,20A8,8 0 0,1 20,12A8,8 0 0,1 12,4M12,6A6,6 0 0,1 6,12A6,6 0 0,1 12,18A6,6 0 0,1 18,12A6,6 0 0,1 12,6M12,8A4,4 0 0,1 8,12A4,4 0 0,1 12,16A4,4 0 0,1 16,12A4,4 0 0,1 12,8Z"/>
+						</svg>
+						Ninja
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Créatures Mythiques Section -->
+	<section id="creatures" class="py-20 px-4 relative bg-gradient-to-b from-black to-gray-900">
+		<div class="container mx-auto max-w-7xl">
+			<h2 class="text-title text-center mb-16 text-shadow-lg animate-text-glow">Créatures Mythiques</h2>
+			
+			<!-- Galerie des Créatures -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+				<!-- Dragons Anciens -->
+				<div class="card-epic p-6 border border-red-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-red-900/20 to-black rounded-lg flex items-center justify-center border-2 border-red-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/dragon-ancien.jpg" alt="Dragons Anciens" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-red-500/20 text-red-400 rounded text-xs font-bold animate-pulse">LÉGENDAIRE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-red-400 mb-3 ancient-text">Dragons Anciens</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-red-400 font-bold">50-100m</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-red-400 font-bold">Feu/Glace</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-red-400 font-bold">Unique</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Les plus puissantes créatures ayant jamais existé, capables de détruire des armées seules."</p>
+				</div>
+
+				<!-- Phénix Immortels -->
+				<div class="card-epic p-6 border border-orange-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.2s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-orange-900/20 to-black rounded-lg flex items-center justify-center border-2 border-orange-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/phenix-immortel.jpg" alt="Phénix Immortels" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-xs font-bold animate-pulse">MYTHIQUE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-orange-400 mb-3 ancient-text">Phénix Immortels</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-orange-400 font-bold">5-10m</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-orange-400 font-bold">Feu</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-orange-400 font-bold">Rare</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Oiseaux de feu qui renaissent de leurs cendres, symboles d'immortalité et de renaissance."</p>
+				</div>
+
+				<!-- Krakens Abyssaux -->
+				<div class="card-epic p-6 border border-blue-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.4s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-blue-900/20 to-black rounded-lg flex items-center justify-center border-2 border-blue-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/kraken-abyssal.jpg" alt="Krakens Abyssaux" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs font-bold animate-pulse">LÉGENDAIRE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-blue-400 mb-3 ancient-text">Krakens Abyssaux</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-blue-400 font-bold">200m+</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-blue-400 font-bold">Eau</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-blue-400 font-bold">Unique</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Monstres marins colossaux qui peuvent engloutir des navires entiers d'un seul tentacule."</p>
+				</div>
+
+				<!-- Golems de Pierre -->
+				<div class="card-epic p-6 border border-gray-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.6s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black rounded-lg flex items-center justify-center border-2 border-gray-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/golem-pierre.jpg" alt="Golems de Pierre" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-gray-500/20 text-gray-400 rounded text-xs font-bold animate-pulse">RARE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-gray-400 mb-3 ancient-text">Golems de Pierre</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-gray-400 font-bold">10-15m</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-gray-400 font-bold">Terre</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-gray-400 font-bold">Rare</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Gardiens magiques créés par les anciens mages, protégeant les lieux sacrés depuis des millénaires."</p>
+				</div>
+
+				<!-- Loups Garous -->
+				<div class="card-epic p-6 border border-green-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.8s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-green-900/20 to-black rounded-lg flex items-center justify-center border-2 border-green-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/loup-garou.jpg" alt="Loups Garous" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs font-bold animate-pulse">MYSTIQUE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-green-400 mb-3 ancient-text">Loups Garous</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-green-400 font-bold">2-3m</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-green-400 font-bold">Nature</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-green-400 font-bold">Commun</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Humains maudits se transformant en loups à la pleine lune, créatures de la nuit et de la chasse."</p>
+				</div>
+
+				<!-- Griffons Célestes -->
+				<div class="card-epic p-6 border border-yellow-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 1.0s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-yellow-900/20 to-black rounded-lg flex items-center justify-center border-2 border-yellow-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/griffon-celeste.jpg" alt="Griffons Célestes" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs font-bold animate-pulse">RARE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-yellow-400 mb-3 ancient-text">Griffons Célestes</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Taille</span>
+							<span class="text-yellow-400 font-bold">4-6m</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Élément</span>
+							<span class="text-yellow-400 font-bold">Air/Terre</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-yellow-400 font-bold">Rare</span>
+						</div>
+					</div>
+					<p class="text-gray-500 text-sm italic">"Créatures majestueuses mi-aigle mi-lion, gardiennes des trésors et des montagnes sacrées."</p>
+				</div>
+			</div>
+			
+			<!-- Statistiques des Créatures -->
+			<div class="card-epic p-8 border border-gold/30 magical-border">
+				<h3 class="text-2xl font-bold text-center mb-8 text-gold ancient-text animate-text-glow">Bestiaire des Royaumes</h3>
+				
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+					<div class="text-center">
+						<div class="text-3xl font-bold text-red-400 mb-2 animate-pulse">6</div>
+						<div class="text-sm text-gray-400 mb-1">Créatures Légendaires</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-red-500 h-2 rounded-full animate-pulse" style="width: 100%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-orange-400 mb-2 animate-pulse" style="animation-delay: 0.2s;">12</div>
+						<div class="text-sm text-gray-400 mb-1">Bêtes Mythiques</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-orange-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.2s; width: 80%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-blue-400 mb-2 animate-pulse" style="animation-delay: 0.4s;">3</div>
+						<div class="text-sm text-gray-400 mb-1">Monstres Marins</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-blue-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.4s; width: 50%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-green-400 mb-2 animate-pulse" style="animation-delay: 0.6s;">∞</div>
+						<div class="text-sm text-gray-400 mb-1">Esprits Naturels</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-green-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.6s; width: 100%"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Légende des Créatures -->
+				<div class="mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg border border-gold/10">
+					<h4 class="text-lg font-bold text-gold mb-4 text-center">Classification des Créatures</h4>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-red-500 rounded-full"></div>
+							<span class="text-gray-300">🔥 Légendaire - Pouvoir divin</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+							<span class="text-gray-300">✨ Mythique - Immortelles</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+							<span class="text-gray-300">🌊 Maritime - Abyssales</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+							<span class="text-gray-300">🗿 Épique - Constructes</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+							<span class="text-gray-300">🌿 Mystique - Naturels</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+							<span class="text-gray-300">👑 Noble - Célestes</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Artefacts Légendaires Section -->
+	<section id="artefacts" class="py-20 px-4 relative">
+		<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+		<div class="container mx-auto max-w-7xl relative z-10">
+			<h2 class="text-title text-center mb-16 text-shadow-lg animate-text-glow">Artefacts Légendaires</h2>
+			
+			<!-- Galerie des Artefacts -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+				<!-- Épée des Âmes -->
+				<div class="card-epic p-6 border border-red-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-red-900/20 to-black rounded-lg flex items-center justify-center border-2 border-red-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/epee-ames.jpg" alt="L'Épée des Âmes" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-red-500/20 text-red-400 rounded text-xs font-bold animate-pulse">LÉGENDAIRE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-red-400 mb-3 ancient-text">L'Épée des Âmes</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-red-400 font-bold">Unique</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-red-400">Arme magique</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"L'épée choisit son maître, jamais l'inverse. Elle a soif d'âmes et ne connaît pitié."</div>
+				</div>
+
+				<!-- Sceptre des Éléments -->
+				<div class="card-epic p-6 border border-purple-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.2s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-purple-900/20 to-black rounded-lg flex items-center justify-center border-2 border-purple-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/sceptre-elements.jpg" alt="Le Sceptre des Éléments" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs font-bold animate-pulse">MYTHIQUE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-purple-400 mb-3 ancient-text">Le Sceptre des Éléments</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-purple-400 font-bold">Unique</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-purple-400">Artefact élémentaire</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"Le pouvoir absolu corrompt absolument. Le sceptre teste son porteur chaque jour."</div>
+				</div>
+
+				<!-- Armure du Templier -->
+				<div class="card-epic p-6 border border-blue-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.4s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-blue-900/20 to-black rounded-lg flex items-center justify-center border-2 border-blue-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/armure-templier.jpg" alt="Armure du Templier" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs font-bold animate-pulse">LÉGENDAIRE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-blue-400 mb-3 ancient-text">Armure du Templier</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-blue-400 font-bold">Rare</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-blue-400">Armure sacrée</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"Protège le juste, punit le coupable. Cette armure a une volonté propre."</div>
+				</div>
+
+							<!-- Anneau de l'Invisible -->
+				<div class="card-epic p-6 border border-green-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.6s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-green-900/20 to-black rounded-lg flex items-center justify-center border-2 border-green-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/anneau-invisible.jpg" alt="Anneau de l'Invisible" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs font-bold animate-pulse">RARE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-green-400 mb-3 ancient-text">Anneau de l'Invisible</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-green-400 font-bold">Rare</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-green-400">Anneau enchanté</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"Ce qui n'est pas vu ne peut être combattu. L'anneau offre l'ultime protection."</div>
+				</div>
+
+				<!-- Phylactère des Morts -->
+				<div class="card-epic p-6 border border-gray-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.8s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black rounded-lg flex items-center justify-center border-2 border-gray-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/phylactere-morts.jpg" alt="Phylactère des Morts" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-gray-500/20 text-gray-400 rounded text-xs font-bold animate-pulse">ARTÉFACT SOMBRE</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-gray-400 mb-3 ancient-text">Phylactère des Morts</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-gray-400 font-bold">Unique</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-gray-400">Nécromancie</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"Contient l'essence de mille âmes. Le posséder, c'est posséder la mort elle-même."</div>
+				</div>
+
+				<!-- Pierre de Résurrection -->
+				<div class="card-epic p-6 border border-yellow-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 1.0s;">
+					<div class="relative mb-6">
+						<div class="w-full h-48 bg-gradient-to-br from-yellow-900/20 to-black rounded-lg flex items-center justify-center border-2 border-yellow-500/20">
+							<div class="w-full h-full flex items-center justify-center">
+								<img src="/images/pierre-resurrection.jpg" alt="Pierre de Résurrection" class="w-full h-full object-cover rounded-lg">
+							</div>
+						</div>
+						<div class="absolute top-2 right-2">
+							<span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs font-bold animate-pulse">DIVIN</span>
+						</div>
+					</div>
+					<h3 class="text-xl font-bold text-yellow-400 mb-3 ancient-text">Pierre de Résurrection</h3>
+					<div class="space-y-3 mb-4">
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Puissance</span>
+							<div class="flex gap-1">
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+								<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+							</div>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Rareté</span>
+							<span class="text-yellow-400 font-bold">Unique</span>
+						</div>
+						<div class="flex justify-between text-sm">
+							<span class="text-gray-400">Type</span>
+							<span class="text-yellow-400">Relique sacrée</span>
+						</div>
+					</div>
+					<div class="text-xs text-gray-500 italic">"La vie est un cadeau. La mort n'est qu'une étape. Cette pierre connaît les deux."</div>
+				</div>
+			</div>
+			
+			<!-- Statistiques des Artefacts -->
+			<div class="card-epic p-8 border border-gold/30 magical-border">
+				<h3 class="text-2xl font-bold text-center mb-8 text-gold ancient-text animate-text-glow">Inventaire des Reliques</h3>
+				
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+					<div class="text-center">
+						<div class="text-3xl font-bold text-red-400 mb-2 animate-pulse">6</div>
+						<div class="text-sm text-gray-400 mb-1">Artefacts Légendaires</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-red-500 h-2 rounded-full animate-pulse" style="width: 100%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-purple-400 mb-2 animate-pulse" style="animation-delay: 0.2s;">2</div>
+						<div class="text-sm text-gray-400 mb-1">Objets Mythiques</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-purple-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.2s; width: 33%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-blue-400 mb-2 animate-pulse" style="animation-delay: 0.4s;">3</div>
+						<div class="text-sm text-gray-400 mb-1">Armes Épiques</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-blue-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.4s; width: 50%"></div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="text-3xl font-bold text-yellow-400 mb-2 animate-pulse" style="animation-delay: 0.6s;">1</div>
+						<div class="text-sm text-gray-400 mb-1">Reliques Divines</div>
+						<div class="w-full bg-gray-700 rounded-full h-2">
+							<div class="bg-yellow-500 h-2 rounded-full animate-pulse" style="animation-delay: 0.6s; width: 17%"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Légende des Pouvoirs -->
+				<div class="mt-8 p-6 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg border border-gold/10">
+					<h4 class="text-lg font-bold text-gold mb-4 text-center">Classification des Pouvoirs</h4>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-red-500 rounded-full"></div>
+							<span class="text-gray-300">⚔️ Légendaire - Pouvoir absolu</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+							<span class="text-gray-300">✨ Mythique - Au-delà des limites</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+							<span class="text-gray-300">🛡️ Épique - Héroïque et rare</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+							<span class="text-gray-300">🌿 Mystique - Magie naturelle</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+							<span class="text-gray-300">💀 Dangereux - Corruption assurée</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+							<span class="text-gray-300">👑 Divin - Bénédictions célestes</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Guilde Section -->
+	<section id="guildes" class="py-20 px-4 relative bg-gradient-to-b from-gray-900 to-black">
+			<h2 class="text-title text-center mb-16 text-shadow-lg">Guildes et Factions</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="card-epic p-6 text-center border border-red-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300">
+					<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-900/20 to-black rounded-full flex items-center justify-center border-2 border-red-500/20">
+						<img src="/images/chevaliers-sang.avif" alt="Chevaliers du Sang" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-lg font-bold text-red-400 mb-2">Chevaliers du Sang</h3>
+					<p class="text-gray-400 text-sm mb-3">Guerriers d'élite protégeant les royaumes</p>
+					<div class="text-xs text-gray-500">
+						<span>Membres: 5000+</span> • 
+						<span>Rang: Élite</span>
+					</div>
+				</div>
+
+				<div class="card-epic p-6 text-center border border-purple-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.1s;">
+					<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-900/20 to-black rounded-full flex items-center justify-center border-2 border-purple-500/20">
+						<img src="/images/conseil-arcanes.jpg" alt="Conseil des Arcanes" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-lg font-bold text-purple-400 mb-2">Conseil des Arcanes</h3>
+					<p class="text-gray-400 text-sm mb-3">Mages régulant l'usage de la magie</p>
+					<div class="text-xs text-gray-500">
+						<span>Membres: 200</span> • 
+						<span>Rang: Maîtres</span>
+					</div>
+				</div>
+
+				<div class="card-epic p-6 text-center border border-gray-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.2s;">
+					<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-900/20 to-black rounded-full flex items-center justify-center border-2 border-gray-500/20">
+						<img src="/images/ombres-silencieuses.jpg" alt="Ombres Silencieuses" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-lg font-bold text-gray-300 mb-2">Ombres Silencieuses</h3>
+					<p class="text-gray-400 text-sm mb-3">Assassins et espions professionnels</p>
+					<div class="text-xs text-gray-500">
+						<span>Membres: 1000</span> • 
+						<span>Rang: Secret</span>
+					</div>
+				</div>
+
+				<div class="card-epic p-6 text-center border border-green-500/30 magical-border animate-glow hover:scale-105 transition-transform duration-300" style="animation-delay: 0.3s;">
+					<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-900/20 to-black rounded-full flex items-center justify-center border-2 border-green-500/20">
+						<img src="/images/gardiens-naturels.jpg" alt="Gardiens Naturels" class="w-full h-full object-cover rounded-full">
+					</div>
+					<h3 class="text-lg font-bold text-green-400 mb-2">Gardiens Naturels</h3>
+					<p class="text-gray-400 text-sm mb-3">Protecteurs des forêts et créatures</p>
+					<div class="text-xs text-gray-500">
+						<span>Membres: 3000</span> • 
+						<span>Rang: Sages</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Carte Interactive Section -->
+	<section id="carte" class="py-20 px-4 relative">
+		<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+		<div class="container mx-auto max-w-7xl relative z-10">
+			<h2 class="text-title text-center mb-16 text-shadow-lg animate-text-glow">Carte des Royaumes</h2>
+			
+			<!-- Carte Interactive -->
+			<div class="card-epic p-8 border border-gold/30 magical-border animate-glow mb-12">
+				<div class="relative">
+					<!-- Carte du Monde -->
+					<div class="relative w-full h-96 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 rounded-lg overflow-hidden border-2 border-gold/20 shadow-2xl">
+						<!-- Image de fond de la carte -->
+						<img src="/images/carte-royaumes.jpg" alt="Carte des Royaumes" class="w-full h-full object-cover opacity-80">
+						
+						<!-- Particules Magiques -->
+						<div class="absolute inset-0">
+							<div class="absolute top-10 left-20 w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
+							<div class="absolute top-32 right-16 w-3 h-3 bg-gray-400 rounded-full animate-pulse shadow-lg shadow-gray-400/50" style="animation-delay: 0.5s;"></div>
+							<div class="absolute top-20 left-1/2 w-3 h-3 bg-orange-500 rounded-full animate-pulse shadow-lg shadow-orange-500/50" style="animation-delay: 1s;"></div>
+							<div class="absolute bottom-20 left-1/3 w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" style="animation-delay: 1.5s;"></div>
+							<div class="absolute bottom-32 right-1/4 w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50" style="animation-delay: 2s;"></div>
+							<div class="absolute top-1/2 right-1/3 w-3 h-3 bg-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50" style="animation-delay: 2.5s;"></div>
+							<div class="absolute bottom-16 left-1/4 w-3 h-3 bg-yellow-500 rounded-full animate-pulse shadow-lg shadow-yellow-500/50" style="animation-delay: 3s;"></div>
+						</div>
+						
+						<!-- Lignes de Connexion -->
+						<svg class="absolute inset-0 w-full h-full pointer-events-none">
+							<line x1="80" y1="40" x2="200" y2="128" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse"/>
+							<line x1="200" y1="128" x2="400" y2="80" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse" style="animation-delay: 0.5s;"/>
+							<line x1="400" y1="80" x2="320" y2="280" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse" style="animation-delay: 1s;"/>
+							<line x1="320" y1="280" x2="160" y2="320" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse" style="animation-delay: 1.5s;"/>
+							<line x1="160" y1="320" x2="480" y2="240" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse" style="animation-delay: 2s;"/>
+							<line x1="480" y1="240" x2="240" y2="160" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="5,5" class="animate-pulse" style="animation-delay: 2.5s;"/>
+						</svg>
+						<!-- Boussole Centrale -->
+						<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+							<div class="w-16 h-16 rounded-full border-2 border-gold/50 bg-black/50 flex items-center justify-center animate-mystical-rotate">
+								<svg class="w-8 h-8 text-gold" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M12,2L14.09,8.26L21,9L16,14L17.45,21L12,17.77L6.55,21L8,14L3,9L9.91,8.26L12,2Z"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Légende -->
+					<div class="mt-6 flex flex-wrap justify-center gap-4">
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+							<span class="text-xs text-gray-400">Royaumes du Nord</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+							<span class="text-xs text-gray-400">Royaumes du Soleil</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-green-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+							<span class="text-xs text-gray-400">Royaumes Forestiers</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+							<span class="text-xs text-gray-400">Royaumes Maritimes</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+							<span class="text-xs text-gray-400">Royaumes Célestes</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Tableau des Royaumes Amélioré -->
+			<div class="card-epic p-8 border border-gold/30 magical-border">
+				<h3 class="text-2xl font-bold text-center mb-8 text-gold ancient-text animate-text-glow">Annuaire des Royaumes</h3>
+				
+				<div class="overflow-x-auto -mx-1 sm:-mx-4 px-1 sm:px-4">
+					<table class="w-full min-w-[180px] sm:min-w-[600px] border-collapse">
+						<thead>
+							<tr class="border-b-2 border-gold/30">
+								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
+									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+										<!-- Couronne détaillée style armurerie -->
+										<path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5"/>
+										<path d="M19 19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V18H19V19Z"/>
+										<!-- Gravures décoratives -->
+										<circle cx="8" cy="10" r="1" fill="currentColor" opacity="0.4"/>
+										<circle cx="16" cy="10" r="1" fill="currentColor" opacity="0.4"/>
+										<path d="M10 8L12 6L14 8" stroke-width="0.8" opacity="0.6"/>
+										<path d="M11 6.5L12 5.5L13 6.5" stroke-width="0.6" opacity="0.5"/>
+									</svg>
+									Royaume
+								</th>
+								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
+									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+										<!-- Dragon héraldique détaillé -->
+										<path d="M12 2C13.1 2 14 2.9 14 4C14 4.74 13.6 5.39 13 5.73V7H14C17.31 7 20 9.69 20 13C20 16.31 17.31 19 14 19H13V20C13 21.1 12.1 22 11 22C9.9 22 9 21.1 9 20V19H8C4.69 19 2 16.31 2 13C2 9.69 4.69 7 8 7H9V5.73C8.4 5.39 8 4.74 8 4C8 2.9 8.9 2 10 2H12"/>
+										<!-- Détails héraldiques -->
+										<path d="M12 4H10V7H8C5.79 7 4 8.79 4 11C4 13.21 5.79 15 8 15H16C18.21 15 20 13.21 20 11C20 8.79 18.21 7 16 7H14V4H12"/>
+										<!-- Ailes stylisées -->
+										<path d="M6 8L4 6L6 8" stroke-width="0.8" opacity="0.7"/>
+										<path d="M18 8L20 6L18 8" stroke-width="0.8" opacity="0.7"/>
+										<!-- Œil du dragon -->
+										<circle cx="14" cy="11" r="1.2" fill="currentColor" opacity="0.3"/>
+										<circle cx="14" cy="11" r="0.6" fill="currentColor" opacity="0.6"/>
+									</svg>
+									Souverain
+								</th>
+								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
+									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+										<!-- Épée runique détaillée -->
+										<path d="M7 3L17 13L13 17L3 7L7 3Z"/>
+										<path d="M13 17L17 21L21 17L17 13"/>
+										<!-- Garde main décoré -->
+										<rect x="8" y="4" width="8" height="2" rx="1" stroke-width="0.8" opacity="0.6"/>
+										<!-- Runes sur la lame -->
+										<path d="M9 6L11 8" stroke-width="0.6" opacity="0.7"/>
+										<path d="M13 6L15 8" stroke-width="0.6" opacity="0.7"/>
+										<!-- Pommeau -->
+										<circle cx="7" cy="3" r="1.5" fill="currentColor" opacity="0.4"/>
+										<circle cx="7" cy="3" r="0.8" fill="currentColor" opacity="0.7"/>
+										<!-- Pierre magique -->
+										<circle cx="17" cy="21" r="1" fill="currentColor" opacity="0.5"/>
+									</svg>
+									Pouvoir
+								</th>
+								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
+									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+										<!-- Cristal facetté complexe -->
+										<path d="M12 2L14.09 8.26L21 9L16 14L17.45 21L12 17.77L6.55 21L8 14L3 9L9.91 8.26L12 2Z"/>
+										<!-- Facettes internes -->
+										<path d="M12 6L13.09 9.13L16.5 9.5L14 12L14.91 15.5L12 13.77L9.09 15.5L10 12L7.5 9.5L10.91 9.13L12 6Z" stroke-width="0.8" opacity="0.8"/>
+										<!-- Gravures géométriques -->
+										<path d="M12 8L14 10" stroke-width="0.6" opacity="0.6"/>
+										<path d="M10 10L12 8" stroke-width="0.6" opacity="0.6"/>
+										<path d="M12 16L14 14" stroke-width="0.6" opacity="0.6"/>
+										<path d="M10 14L12 16" stroke-width="0.6" opacity="0.6"/>
+										<!-- Centre lumineux -->
+										<circle cx="12" cy="12" r="1.5" fill="currentColor" opacity="0.3"/>
+										<circle cx="12" cy="12" r="0.8" fill="currentColor" opacity="0.6"/>
+									</svg>
+									Ressources
+								</th>
+								<th class="px-0.5 sm:px-4 py-0.5 sm:py-3 text-left text-gold font-bold text-[8px] sm:text-lg">
+									<svg class="inline w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+										<!-- Bouclier héraldique orné -->
+										<path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/>
+										<!-- Croix centrale -->
+										<path d="M12 7V17M8 11H16" stroke-width="1" opacity="0.7"/>
+										<!-- Symbole central -->
+										<circle cx="12" cy="11" r="2" fill="currentColor" opacity="0.3"/>
+										<path d="M12 7C13.4 7 14.8 8.6 14.8 10V11.5C14.8 12.9 13.4 14.5 12 14.5C10.6 14.5 9.2 12.9 9.2 11.5V10C9.2 8.6 10.6 7 12 7Z" stroke-width="0.8" opacity="0.8"/>
+										<!-- Bordures décoratives -->
+										<path d="M6 4L12 7L18 4" stroke-width="0.6" opacity="0.5"/>
+										<path d="M6 20L12 17L18 20" stroke-width="0.6" opacity="0.5"/>
+										<!-- Fleur de lis -->
+										<path d="M12 4L11 6L12 8L13 6L12 4" fill="currentColor" opacity="0.4"/>
+									</svg>
+									Alliance
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-1 sm:px-4 py-1 sm:py-4">
+									<div class="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2">
+										<div class="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-0">
+											<div class="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-pulse"></div>
+											<span class="text-red-400 font-bold text-xs sm:text-base">Nord Sauvage</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Roi Jon Snow</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Glace & Loups</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Obsidienne, Fourrure</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+									<span class="px-1 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">Neutre</span>
+								</td>
+							</tr>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+									<div class="flex flex-col sm:flex-row items-start sm:items-center gap-0.5 sm:gap-2">
+										<div class="flex items-center gap-0.5 sm:gap-2 mb-0.5 sm:mb-0">
+											<div class="w-1.5 h-1.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+											<span class="text-gray-400 font-bold text-xs sm:text-base">Terres de l'Ombre</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Seigneur Mordred</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Ombres & Nécromancie</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Crystals Noirs, Poison</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+									<span class="px-1 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Hostile</span>
+								</td>
+							</tr>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-1 py-4">
+									<div class="flex flex-col items-start gap-1">
+										<div class="flex items-center gap-1 mb-1">
+											<div class="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+											<span class="text-orange-400 font-bold text-xs">Empire du Soleil</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Empereur Ra-Hor</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Feu & Lumière</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Or, Épices, Sables</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+							<span class="px-1 py-0.5 bg-green-500/20 text-green-400 rounded text-xs">Allié</span>
+						</td>
+							</tr>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-1 py-4">
+									<div class="flex flex-col items-start gap-1">
+										<div class="flex items-center gap-1 mb-1">
+											<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 0.6s;"></div>
+											<span class="text-green-400 font-bold text-xs">Forêt Primitive</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Reine Galadriel</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Nature & Magie</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Herbes, Bois Rares</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+							<span class="px-1 py-0.5 bg-green-500/20 text-green-400 rounded text-xs">Allié</span>
+						</td>
+							</tr>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-1 py-4">
+									<div class="flex flex-col items-start gap-1">
+										<div class="flex items-center gap-1 mb-1">
+											<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+											<span class="text-blue-400 font-bold text-xs">Îles Mauditées</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Capitaine Barbe-Noire</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Eaux & Tempêtes</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Perles, Corail</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+						<span class="px-1 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">Neutre</span>
+						</td>
+							</tr>
+							<tr class="border-b border-gold/10 hover:bg-gold/5 transition-colors">
+								<td class="px-1 py-4">
+									<div class="flex flex-col items-start gap-1">
+										<div class="flex items-center gap-1 mb-1">
+											<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+											<span class="text-purple-400 font-bold text-xs">Plateaux Célestes</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Archonte Zeus</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Cieux & Foudre</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Éther, Cristaux</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+						<span class="px-1 py-0.5 bg-purple-500/20 text-purple-400 rounded text-xs">Mystique</span>
+						</td>
+							</tr>
+							<tr class="hover:bg-gold/5 transition-colors">
+								<td class="px-1 py-4">
+									<div class="flex flex-col items-start gap-1">
+										<div class="flex items-center gap-1 mb-1">
+											<div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style="animation-delay: 1.2s;"></div>
+											<span class="text-yellow-400 font-bold text-xs">Déserts Ardents</span>
+										</div>
+									</div>
+								</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Sultan Aladin</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Feu & Illusions</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4 text-gray-300 text-[8px] sm:text-base">Gems, Tapis Volants</td>
+								<td class="px-0.5 sm:px-4 py-0.5 sm:py-4">
+						<span class="px-1 py-0.5 bg-orange-500/20 text-orange-400 rounded text-xs">Commercial</span>
+						</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<!-- Statistiques des Royaumes -->
+				<div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+					<div class="text-center p-4 bg-gradient-to-br from-red-900/20 to-red-800/10 rounded-lg border border-red-500/20">
+						<div class="text-2xl font-bold text-red-400 animate-pulse">7</div>
+						<div class="text-sm text-gray-400">Royaumes Actifs</div>
+					</div>
+					<div class="text-center p-4 bg-gradient-to-br from-green-900/20 to-green-800/10 rounded-lg border border-green-500/20">
+						<div class="text-2xl font-bold text-green-400 animate-pulse" style="animation-delay: 0.3s;">2</div>
+						<div class="text-sm text-gray-400">Alliances Fortes</div>
+					</div>
+					<div class="text-center p-4 bg-gradient-to-br from-blue-900/20 to-blue-800/10 rounded-lg border border-blue-500/20">
+						<div class="text-2xl font-bold text-blue-400 animate-pulse" style="animation-delay: 0.6s;">3</div>
+						<div class="text-sm text-gray-400">Royaumes Neutres</div>
+					</div>
+					<div class="text-center p-4 bg-gradient-to-br from-purple-900/20 to-purple-800/10 rounded-lg border border-purple-500/20">
+						<div class="text-2xl font-bold text-purple-400 animate-pulse" style="animation-delay: 0.9s;">∞</div>
+						<div class="text-sm text-gray-400">Pouvoirs Mystiques</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-20 px-4 relative bg-gradient-to-t from-black to-gray-900">
+		<div class="container mx-auto max-w-4xl">
+			<h2 class="text-title text-center mb-16 text-shadow-lg">Rejoignez la Légende</h2>
+			
+			<div class="card-medieval p-8 border border-gray-700/40">
+				<form class="space-y-6" x-data="{ submitted: false }" @submit.prevent="submitted = true">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-yellow-400 font-semibold mb-2">Nom du Héros</label>
+							<input type="text" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/30 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors" placeholder="Votre nom légendaire">
+						</div>
+						<div>
+							<label class="block text-yellow-400 font-semibold mb-2">Parchemin Électronique</label>
+							<input type="email" class="w-full px-4 py-3 bg-gradient-to-r from-amber-900/20 to-orange-900/20 border border-amber-600/40 rounded-lg text-amber-100 placeholder-amber-400/60 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all duration-300 shadow-inner backdrop-blur-sm" placeholder="votre@email.com">
+						</div>
+					</div>
+					
+					<div>
+						<label class="block text-yellow-400 font-semibold mb-2">Royaume d'Origine</label>
+						<select class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/30 rounded-lg text-gray-300 focus:outline-none focus:border-yellow-400 transition-colors">
+							option>Choisissez votre royaume</option>
+							<option>Le Nord Sauvage</option>
+							<option>Les Terres de l'Ombre</option>
+							<option>L'Empire du Soleil</option>
+							<option>La Forêt Primitive</option>
+							<option>Les Îles Mauditées</option>
+							<option>Les Plateaux Célestes</option>
+							<option>Les Déserts Ardents</option>
+							<option>Aventurier sans royaume</option>
+						</select>
+					</div>
+					
+					<div>
+						<label class="block text-yellow-400 font-semibold mb-2">Votre Quête</label>
+						<textarea rows="4" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/30 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors resize-none" placeholder="Décrivez votre aventure et votre destinée..."></textarea>
+					</div>
+					
+					<div class="text-center">
+						<button type="submit" class="btn-hero">Envoyer par Corbeau Messager</button>
+					</div>
+					
+					<div x-show="submitted" x-transition class="mt-4 p-4 bg-green-900/30 border border-green-600/30 rounded-lg text-green-400 text-center">
+						Votre message a été envoyé avec succès! Un messager royal vous répondra sous 24 heures.
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 1s ease-out forwards;
+	}
+</style>
